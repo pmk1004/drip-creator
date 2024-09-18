@@ -16,8 +16,8 @@ function Header() {
     <nav>
       <ul>
         <li><a href="/">생성하기</a></li>
-        <li><a href="/">명언갤러리</a></li>
-        <li><a href="/">개요</a></li>
+        <li><a href="/gallary">명언갤러리</a></li>
+        <li><a href="/about">개요 및 사용법</a></li>
       </ul>
       <div className="toggle_container" onClick={toggleTheme}>
         <label className={isDark ? 'toggleSwitch active' : 'toggleSwitch'}>

@@ -37,11 +37,14 @@ ul li {
 }
 
 /* test */
-.content-wrapper {
+.content-wrapper{
   flex: 1;
   margin: 60px 0;
   width: 80%;
-  /* color: white; */
+  color: #343434;
   font-size: 25px;
-  color: #343434
+}
+
+.App.dark .content-wrapper {
+  color: white;
 }
