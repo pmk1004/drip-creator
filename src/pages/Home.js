@@ -4,23 +4,21 @@ import { createRandomNum } from "../features/createRandomNum";
 import { getDrip } from "../features/getDrip";
 
 function Home(props) {
+  const [num, setNum] = useState();
+  const [drip, setDrip] = useState();
   const lightDrips = props.drips[0];
   const heavyDrips = props.drips[1];
 
   const galleryData = useContext(GalleryContext);
-  const [num, setNum] = useState();
-  const [drip, setDrip] = useState();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const idx = createRandomNum(galleryData.length)
     setNum(idx);
     console.log("setNum 실행");
   }, []);
 
   const data = num !== undefined ? galleryData[num] : galleryData[0];
-  if(num != undefined){
 
-  }
   return (
     <div>
       <div className="gallery-container">

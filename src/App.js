@@ -29,15 +29,8 @@ const heavyDrip = [
 function App() {
   const [isDark, setIsDark] = useState(() => {
     const storedTheme = localStorage.getItem("isDark");
-    return storedTheme === "true";
+    return storedTheme === null ? true : storedTheme === "true"; // 기본값을 true로
   });
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("isDark");
-    if (storedTheme === "true") {
-      setIsDark(true);
-    }
-  }, []); // 초기값 설정용
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("isDark");
