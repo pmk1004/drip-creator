@@ -59,6 +59,12 @@ ul li {
   width: 100%;
 }
 
+.flex{
+  display: flex;
+}
+.align-center{
+  align-items: center;
+}
 .m-t-25{
   margin-top: 25px
 }
@@ -75,6 +81,10 @@ ul li {
 
 .center {
   text-align: center;
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 .btn-wrapper{
