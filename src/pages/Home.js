@@ -6,7 +6,7 @@ import "../app/styles/home.css";
 
 function Home(props) {
   const [num, setNum] = useState();
-  const [drip, setDrip] = useState();
+  const [drip, setDrip] = useState('여기에 명언이 표시됩니다.');
   const lightDrips = props.drips[0];
   const heavyDrips = props.drips[1];
 
@@ -48,7 +48,7 @@ function Home(props) {
             명언 생성(heavy)
           </button>
         </div>
-        <div>
+        <div className="drip-text flex j-f-center align-center">
           <p>{drip}</p>
         </div>
       </div>
