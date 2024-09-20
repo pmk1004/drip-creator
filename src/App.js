@@ -13,7 +13,7 @@ const galleryData = [
   {id: 1, drip: "머리가 안 좋은데 왜 니 애비보다 연봉이 10배 이상 높을까?", author: "한주먹", imgSrc: "한주먹_1.jpg"},
   {id: 2, drip: "애미뒤진 새끼들 이악물고 악플달러 오는거 존나 웃기네ㅋㅋㅋ", author: "한주먹", imgSrc: "한주먹_2.jpg"},
   {id: 3, drip: "니 애미가 너 꼴뵈기 싫어하는 것 보다 더할까ㅋㅋ", author: "한주먹", imgSrc: "한주먹_3.png"},
-  {id: 3, drip: "3일 안에 니 애미 뒤지라고 오늘부터 제사지냄", author: "한주먹", imgSrc: "한주먹_4.png"},
+  {id: 4, drip: "3일 안에 니 애미 뒤지라고 오늘부터 제사지냄", author: "한주먹", imgSrc: "한주먹_4.png"},
 ];
 
 const lightDrip = [
