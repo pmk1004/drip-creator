@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
-import "../app/styles/outline.css";
 
 function navigate(props) {
   if(props === 'about'){
@@ -15,17 +14,21 @@ function navigate(props) {
   }
 }
 
-function About() {
+function About(props) {
+  const navigatorRef = useRef();
+  useEffect(() => {
+    props.getNavigator(navigatorRef);
+  })
 
   return (
     <div>
-      <div className="navigator" >
+      <div className="navigator" ref={navigatorRef}>
         <p onClick={() => {navigate('about')}}>개요</p>
         <p onClick={() => {navigate('how-to-use')}}>사용법</p>
       </div>
       <div className="outline">
         <div className="about">
-          <span>- 인류의 역사에는 패드립이 있었다. -</span>
+          <span>인류의 역사에는 패드립이 있었다.</span>
 
           <div className="about-wrapper">
             <div className="img-container">
