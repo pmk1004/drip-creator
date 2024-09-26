@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback, useRef } from "react";
+import React, { useState, useEffect, useContext, useCallback, useRef, useLayoutEffect } from "react";
 import { GalleryContext } from "../app/provider/galleryContext";
 import { createRandomNum } from "../features/createRandomNum";
 import { getDrip } from "../features/getDrip";
@@ -19,17 +19,21 @@ function Home(props) {
   }, []);
   
   const handleClick = useCallback(() => {
-    if (debounceTimer.current) return; // 이미 타이머가 설정된 경우 무시
-
+    if (debounceTimer.current) return; 
     setNum(createRandomNum(galleryData.length));
 
-    // 0.6초 후 타이머 초기화
     debounceTimer.current = setTimeout(() => {
       debounceTimer.current = null;
     }, 500);
   }, []);
 
   const data = num !== undefined ? galleryData[num] : galleryData[0];
+
+  // useLayoutEffect를 사용하여 이미지와 텍스트를 동시에 업데이트
+  useLayoutEffect(() => {
+    // 이미지와 텍스트를 동시에 업데이트
+    setNum(num !== undefined ? num : createRandomNum(galleryData.length));
+  }, [num, galleryData]);
 
   return (
     <div>
@@ -43,9 +47,7 @@ function Home(props) {
           </div>
           <div className="overlay"></div>
         </div>
-        <button onClick={handleClick}>
-          명언 변경
-        </button>
+        <button onClick={handleClick}>명언 변경 </button>
       </div>
       {/* setState를 화살표 함수로 래핑함으로써 해당 코드는 사용자가 클릭할 때만 변할 수 있도록 함수 설정해 무한루프 방지 */}
 
