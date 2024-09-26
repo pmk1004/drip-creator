@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback, useRef, useLayoutEffect } from "react";
+import React, { useState, useEffect, useContext, useCallback, useRef } from "react";
 import { GalleryContext } from "../app/provider/galleryContext";
 import { createRandomNum } from "../features/createRandomNum";
 import { getDrip } from "../features/getDrip";
@@ -28,12 +28,6 @@ function Home(props) {
   }, []);
 
   const data = num !== undefined ? galleryData[num] : galleryData[0];
-
-  // useLayoutEffect를 사용하여 이미지와 텍스트를 동시에 업데이트
-  useLayoutEffect(() => {
-    // 이미지와 텍스트를 동시에 업데이트
-    setNum(num !== undefined ? num : createRandomNum(galleryData.length));
-  }, [num, galleryData]);
 
   return (
     <div>
