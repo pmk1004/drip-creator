@@ -17,7 +17,7 @@ function Header(props) {
   })
   return (
     <div className="header" ref={headerRef}>
-      <h1 className="logo">Logo</h1>
+      <h1 className="logo">📕명언 생성기</h1>
       <nav>
         <ul>
           <li>

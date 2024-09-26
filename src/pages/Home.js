@@ -53,10 +53,10 @@ function Home(props) {
         <span className="f-25 block center m-b-25">명언 생성하기</span>
         <div className="btn-wrapper">
           <button onClick={() => getDrip(lightDrips, setDrip, debounceTimer)}>
-            명언 생성(light)
+            명언 생성(🩵light)
           </button>
           <button onClick={() => getDrip(heavyDrips, setDrip, debounceTimer)}>
-            명언 생성(heavy)
+            명언 생성(💥heavy)
           </button>
         </div>
         <div className="drip-text flex j-f-center align-center">
