@@ -30,13 +30,13 @@ function Header(props) {
             <a href="/about">개요 및 사용법</a>
           </li>
         </ul>
-        <div className="toggle_container" onClick={toggleTheme}>
+        {/* <div className="toggle_container" onClick={toggleTheme}>
           <label className={isDark ? "toggleSwitch active" : "toggleSwitch"}>
             <span className="toggleButton">
               <img className="display_mode_icon" src={isDark ? moon : sun} />
             </span>
           </label>
-        </div>
+        </div> */}
       </nav>
     </div>
   );

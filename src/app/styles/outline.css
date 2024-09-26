@@ -12,6 +12,11 @@
     color: #454545;
     border-left: 2px solid rgb(222, 222, 222);                
 }
+.App .navigator > p {
+    font-size: 1rem;
+    line-height: 1.5;
+
+}
 .App .navigator > p:hover{
     font-size: 1.05rem;
     color: #222222;
@@ -27,8 +32,6 @@
     border-left: 2px solid #161616;
 }
 .App.dark .navigator > p {
-    font-size: 1rem;
-    line-height: 1.5;
     color: rgb(154, 154, 154);
 }
 .App.dark .navigator > p:hover{
@@ -55,7 +58,7 @@
 }
 .about > span, .how-to-use > span {
     display: block;
-    margin: 15px 0 30px 0;
+    margin: 15px 0 20px 0;
     font-size: 32px;
 }
 .about-wrapper{
@@ -72,6 +75,7 @@
 }
 
 .img-container {
+    margin: 25px 0;
     display: flex;
     justify-content: center;
     align-items: center;

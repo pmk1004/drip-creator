@@ -14,9 +14,16 @@ import Footer from "./widgets/Footer";
 
 const galleryData = [
   {id: 1, drip: "머리가 안 좋은데 왜 니 애비보다 연봉이 10배 이상 높을까?", author: "한주먹", imgSrc: "한주먹_1.jpg"},
-  {id: 2, drip: "애미뒤진 새끼들 이악물고 악플달러 오는거 존나 웃기네ㅋㅋㅋ", author: "한주먹", imgSrc: "한주먹_2.jpg"},
-  {id: 3, drip: "니 애미가 너 꼴뵈기 싫어하는 것 보다 더할까ㅋㅋ", author: "한주먹", imgSrc: "한주먹_3.png"},
-  {id: 4, drip: "3일 안에 니 애미 뒤지라고 오늘부터 제사지냄", author: "한주먹", imgSrc: "한주먹_4.png"},
+  {id: 2, drip: "ㅇ미뒤진 새끼들 이악물고 악플달러 오는거 존나 웃기네ㅋㅋㅋ", author: "한주먹", imgSrc: "한주먹_2.jpg"},
+  {id: 3, drip: "니 ㅇ미가 너 꼴뵈기 싫어하는 것 보다 더할까ㅋㅋ", author: "한주먹", imgSrc: "한주먹_3.png"},
+  {id: 4, drip: "3일 안에 니 ㅇ미 뒤지라고 오늘부터 제사지냄", author: "한주먹", imgSrc: "한주먹_4.png"},
+  {id: 5, drip: "칼로 니 친정 엄마 x발년아, x구멍 찢어서 x탱이에...", author: "이재명", imgSrc: "이재명-2.jpg"},
+  {id: 6, drip: "하...마이머머님...왜 피임을 안하셨어요...", author: "괴물쥐", imgSrc: "괴물쥐-1.jpeg"},
+  {id: 7, drip: "네 부모가 친부모인지부터 의심해라. 고아원 원장이랑 주작했을지 누가 아는데", author: "강한달", imgSrc: "강한달-1.jpg"},
+  {id: 8, drip: "구제역 너네 얼마나 너가 역겨우면 너의 어머니가 스트레스 받아서 안타깝게 일찍 돌아가시냐?", author: "이근", imgSrc: "이근-1.jpg"},
+  {id: 9, drip: "넌 니ㅇ미 따라가라", author: "가재맨", imgSrc: "가재맨-2.gif"},
+  {id: 10, drip: "페이커 ㅇ미 창ㄴ!!!!!", author: "가재맨", imgSrc: "가재맨-3.jpg"},
+  {id: 11, drip: "커밍아웃 후 부모의 ㅈ같음 견디는 꿀팁좀 알려줘", author: "한국여성인권진흥원 공식 트위터 중...", imgSrc: "한녀진흥원.jpg"},
 ];
 
 const lightDrip = [
@@ -70,7 +77,7 @@ function App() {
       };
     }
   }, []);
-
+  
   return (
     <ThemeContext.Provider value={{ isDark, setIsDark }}>
       <GalleryContext.Provider value={galleryData}>
@@ -79,8 +86,8 @@ function App() {
           <div className="content-wrapper">
             <Routes>
               <Route path="/" exact element={<Home drips={[lightDrip, heavyDrip]}/>} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/about" element={<About getNavigator={getNavigator}/>} />
+              <Route path="https://quotes-gallery.netlify.app//gallery" element={<Gallery />} />
+              <Route path="https://quotes-gallery.netlify.app//about" element={<About getNavigator={getNavigator}/>} />
             </Routes>
           </div>
           <Footer />

@@ -1,20 +1,8 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
-
-function navigate(props) {
-  if(props === 'about'){
-    window.scrollTo({
-      top: 0,
-      behaiver: 'smooth'
-    })
-  } else {
-    window.scrollTo({
-      top: 2700,
-      behaiver: 'smooth'
-    })
-  }
-}
+import { navigateContent } from "../features/navigateContent";
 
 function About(props) {
+  const htuRef = useRef();
   const navigatorRef = useRef();
   useEffect(() => {
     props.getNavigator(navigatorRef);
@@ -23,8 +11,8 @@ function About(props) {
   return (
     <div>
       <div className="navigator" ref={navigatorRef}>
-        <p onClick={() => {navigate('about')}}>개요</p>
-        <p onClick={() => {navigate('how-to-use')}}>사용법</p>
+        <p onClick={() => {navigateContent('about')}}>개요</p>
+        <p onClick={() => {navigateContent(htuRef.current)}}>사용법</p>
       </div>
       <div className="outline">
         <div className="about">
@@ -127,7 +115,7 @@ function About(props) {
             </div>
           </div>
         </div>
-        <div className="how-to-use">
+        <div className="how-to-use" ref={htuRef}>
           <span>패드립 생성기</span>
 
           {/* sample text */}

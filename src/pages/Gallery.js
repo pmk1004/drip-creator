@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useCallback } from "react";
+import React, { useContext, useRef, useCallback, useEffect } from "react";
 import { GalleryContext } from "../app/provider/galleryContext";
 import { slideItem } from "../features/slideItem";
 
@@ -17,6 +17,10 @@ function Gallery() {
       debounceTimer.current = null;
     }, 600);
   }, []);
+
+  useEffect(()=>{
+    galleryRef.current.style.width = `${100 * galleryDatas.length}%`;
+  })
 
   return (
     <div>
