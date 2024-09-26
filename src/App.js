@@ -86,8 +86,8 @@ function App() {
           <div className="content-wrapper">
             <Routes>
               <Route path="/" exact element={<Home drips={[lightDrip, heavyDrip]}/>} />
-              <Route path="https://quotes-gallery.netlify.app//gallery" element={<Gallery />} />
-              <Route path="https://quotes-gallery.netlify.app//about" element={<About getNavigator={getNavigator}/>} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/about" element={<About getNavigator={getNavigator}/>} />
             </Routes>
           </div>
           <Footer />
